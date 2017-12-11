@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+.centered_content {
+  border: 2px solid blue;
+  position: absolute;
+  left: 7%;
+  background-color: #252526;
+  width: 85%;
+  border-radius: 25px;
+  /* align-content: left; */
+}
+
+.MovieTitle {
+  font-Size: 2rem;
+}
+.invisible {
+  display: none;
+}
+.visible--active {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  background-color: white;
+  transition: 1s;
+}
+
+
+.jsx_containerdiv {
+/* fix aligning content to center of IDEAL MOVIE div */
+border: 2px solid red;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: #252526;
+border-top: none;
+border-radius: 45px;
+}
+/* remove button and make link to page----- or just list out my_5 on bottom screen for post and create */
+input {
+  font-size: 1.7rem;
+  width: 18rem;
+  height: 1.7rem;
+
+}
+
+.title_inputBox {
+  position: ;
+  font-size: 1.5rem;
+  color: white;
+  font
+  width: 100%;
+  border: 0;
+}
+
+.My_5 {
+  align-content: center;
+  
+}
+.movie_button {
+  height: 33px;
+  margin-bottom: 7rem;
+  vertical-align: top;
+}
+
+
+.favorites {
+  width: 4rem;
+  color: white;
+  display: flex;
+  
+
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
