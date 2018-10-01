@@ -10,11 +10,13 @@
   background-color: #252526;
   width: 85%;
   border-radius: 25px;
+  
   /* align-content: left; */
 }
 
 .MovieTitle {
   font-Size: 2rem;
+  color: blue;
 }
 .invisible {
   display: none;

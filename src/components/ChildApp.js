@@ -16,6 +16,7 @@ class ChildApp extends Component {
           picture: '',
           userInput: '',
           results:[],
+          movs: '',
          favoriteMoviesArray: [],
          favoriteMoviesResults:[],
          active: false
@@ -28,14 +29,13 @@ class ChildApp extends Component {
         this.getMovies = this.getMovies.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.getFaveMovies = this.getFaveMovies.bind(this);
-        
       }
-     
+     //handleClick is the function that is called upon 'add to favs' button clicl to send the "current" index position [i] from param on funtion, to the setstate of favmoviesarray
       handleClick(i) {
     
         axios.post('http://www.localhost:3005/api/movies', this.state.results[i])
         .then(response => {
-          (console.log(response.data))
+          console.log(response.data)
           this.setState({
              favoriteMoviesArray:response.data
     
@@ -50,11 +50,11 @@ class ChildApp extends Component {
           userInput: val,
         })
       }
-    
       getMovies(){
         const key = '2890908e9c7da4e156e1051860b4bad8';
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.state.userInput}`)
         .then(response => {
+          
           console.log(response.data),
     
           this.setState({
@@ -107,6 +107,7 @@ class ChildApp extends Component {
             
                            <AddButton handleClick={this.handleClick} index={index}/> 
                            
+                           
                            </div>
                      
                         </div>)
@@ -146,6 +147,7 @@ class ChildApp extends Component {
               </div>
     
               <div className="faves">
+              <input className="searchMovies" type="text" onChange={(e) => {this.setState({movs: e.target.value})}}/>
               {faveMoviesDisplay}
               </div>
               

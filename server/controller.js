@@ -26,6 +26,14 @@ module.exports = {
     read: (request, response) => {
         
       response.status(200).send(favoriteMoviesArray);
+  },
+
+  readFavoriteQuery: (req, res) => {
+      console.log('req.query', req.query)
+
+      favoriteMoviesArray.search()
+
+      res.status(200).send(movies)
   }
 
 }
